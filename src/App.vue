@@ -3,12 +3,13 @@
 </template>
 
 <script>
-import navbar from './components/navbar';
+import navbar from './components/navbar'
 
 export default {
+  name: 'App',
 
   components: {
-    navbar,
+    navbar
   },
 
   data: () => ({

@@ -1,4 +1,6 @@
 <template>
+<div id="app">
+  <v-app>
     <v-app-bar
       color="white"
       dense
@@ -19,13 +21,15 @@
 
       <span>Contact</span>
 
+        <button @click="myFunction()">Click Me</button>
+
       <v-spacer></v-spacer>
 
-      <v-btn icon class="ma-2" outlined fab color="red">
+      <v-btn @click="github()" icon class="ma-2" outlined fab color="red">
         <v-icon>mdi-github</v-icon>
       </v-btn>
 
-      <button @click="github">click</button>
+
 
       <v-menu
         left
@@ -52,11 +56,14 @@
           </v-list-item>
         </v-list>
       </v-menu>
-    </v-app-bar> 
+    </v-app-bar>
+    </v-app>
+  </div>
 </template>
 
 <script>
   export default {
+    el: '#app',
     name: 'navbar',
 
     data: () => ({
